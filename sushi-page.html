@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nigiri Sushi 🍣</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at -8.9% 51.2%,
+          rgb(255, 124, 0) 0%,
+          rgb(255, 124, 0) 15.9%,
+          rgb(255, 163, 77) 15.9%,
+          rgb(255, 163, 77) 24.4%,
+          rgb(19, 30, 37) 24.5%,
+          rgb(19, 30, 37) 66%
+        );
+        font-family: "Serif", Georgia, "Times New Roman", Times, serif;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+      }
+      h1 {
+        color: #ffa34d;
+        text-align: center;
+        border: 1px solid #ff7c00;
+        padding: 20px;
+        border-radius: 4px;
+        font-size: 40px;
+      }
+      h2 {
+        text-align: center;
+        color: antiquewhite;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      p {
+        color: antiquewhite;
+        line-height: 1.5;
+        font-size: 18px;
+        margin: 20px 0 10px;
+      }
+      .learn-more {
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        font-size: 12px;
+        color: #ff7c00;
+      }
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+      .builtBy {
+        color: antiquewhite;
+        text-decoration: none;
+      }
+      .builtBy:hover {
+        text-decoration: underline;
+        color: #ff7c00;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background: #ffa34d;
+        color: antiquewhite;
+        font-size: 18px;
+        font-family: "Serif", Georgia, "Times New Roman", Times, serif;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        transition: all 150ms ease-in-out;
+      }
+
+      a {
+        text-decoration: none;
+        color: antiquewhite;
+      }
+
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .footer {
+        text-align: center;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I Love Sushi</h1>
+      <h2>Especially Salmon Toro Nigiri</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/401/original/salmon-toro-nigiri-sushi.jpg?1669493673"
+        alt="Salmon Toro Nigiri Sushi"
+        width="500"
+      />
+      <hr />
+      <p>
+        <strong>Toro salmon</strong>- The toro cut of a fish refers to the fatty
+        belly section, and is also the Japanese word for “melt.” This cut of
+        salmon is fatty and rich, and whether served raw or slightly grilled,
+        has an extremely tender texture.
+      </p>
+      <p>
+        <strong>Nigirizushi</strong> <span>(握り寿司,</span>
+        <em>"hand-pressed sushi"</em>) consists of an oblong mound of sushi rice
+        that a chef typically presses between the palms of the hands to form an
+        oval-shaped ball, and a topping (the neta) draped over the ball.
+      </p>
+      <a
+        href="https://en.wikipedia.org/wiki/Sushi#Nigiri-zushi"
+        target="_blank"
+        class="learn-more"
+      >
+        📙 Learn more on Wikipedia
+      </a>
+      <hr />
+      <button class="recipesButton">
+        <a
+          class="recipe-search"
+          href="https://www.google.com/search?q=nigirizushi+recipes&rlz=1C1CHBF_enUS878US878&oq=nigirizushi+recipes&aqs=chrome.0.0i512j0i10i512l2j0i22i30.4304j0j7&sourceid=chrome&ie=UTF-8"
+          >Nigirizushi Recipes</a
+        >
+      </button>
+
+      <p class="footer">
+        👨‍💻 Coded by
+        <a
+          href="https://www.shecodes.io/workshops/shecodes-basics-4bd3f9f1-3e3c-4492-be18-4e40910a9826/projects/1304295"
+          target="_blank"
+          class="builtBy"
+        >
+          Sam Turner</a
+        >
+        with HTML, CSS, and JavaScript
+      </p>
+    </div>
+    <script>
+      function recipes() {
+        let name = prompt("What is your name?");
+        if (name.length) {
+          let email = prompt("What is your email address?");
+          if (email.length) {
+            let emoji = prompt("What is your favourite emoji?");
+            alert(
+              "Thank you, " +
+                name +
+                "! We will be in touch by email. Meanwhile, have a lot of sushi! " +
+                emoji
+            );
+          } else {
+            alert("Sorry--no email, no recipes! 🙅‍♂️");
+          }
+        } else {
+          alert("Sorry--no name, no recipes! 🙅‍♂️");
+        }
+      }
+      let recipesButton = document.querySelector(".recipesButton");
+      recipesButton.addEventListener("click", recipes);
+    </script>
+  </body>
+</html>
